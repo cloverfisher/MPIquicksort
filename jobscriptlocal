@@ -1,0 +1,12 @@
+#!/bin/bash
+
+
+mkdir outputtest
+
+
+mpirun -n 1 quicksortparallel >output/outputtext1
+mpirun -n 4 quicksortparallel >output/outputtext4
+mpirun -n 8 quicksortparallel >output/outputtext8
+mpirun -n 12 quicksortparallel >output/outputtext12
+mpirun -n 16 quicksortparallel >output/outputtext16
+

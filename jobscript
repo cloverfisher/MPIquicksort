@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#PBS -l ncpus=16
+#PBS -l nodes=2:ppn=4
+#PBS -m ea
+#PBS -o grid.wayne.edu:~fd9286/output_file.64
+#PBS -e grid.wayne.edu:~fd9286/error_file.64
+
+mpirun -n 1 quicksortparallel >output/outputtext1
+mpirun -n 4 quicksortparallel >output/outputtext4
+mpirun -n 8 quicksortparallel >output/outputtext8
+mpirun -n 12 quicksortparallel >output/outputtext12
+mpirun -n 16 quicksortparallel >output/outputtext16
+
